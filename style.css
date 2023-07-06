@@ -1,0 +1,310 @@
+/***** GLOBALS *****/
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: "futura-pt", sans-serif;
+    font-weight: 700;
+    font-style: italic;
+}
+
+
+html {
+    scroll-behavior: smooth;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+a:hover {
+    color: #d92b2e;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: black;
+    width: 100%;
+}
+
+.icons {
+    padding-top: 2em;
+    display: flex;
+    column-gap: 2.5em;
+}
+
+.icons a img {
+    width: 4em;
+    height: auto;
+    filter: invert(100);
+}
+
+.icons a img:hover {
+    filter: none;
+}
+
+/***** UTILITY CLASSES *****/
+.white {
+    color: white;
+}
+
+.red {
+    color: #d92b2e;
+}
+
+.smol {
+    font-size: 0.85em;
+}
+
+#active-page {
+    color: #d92b2e;
+}
+
+.mobile-only {
+    display: none;
+}
+
+/***** FULL PAGE *****/
+.full-page {
+    background-size: cover;
+    background-position: center;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.nav-links {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    column-gap: 1.5em;
+    height: 3em;
+    padding-bottom: 2.5em;
+}
+
+.nav-links a {
+    color: white;
+    font-size: 2em;
+    filter: drop-shadow(5px 5px 5px black);
+}
+
+.nav-links a:hover {
+    color: #d92b2e;
+}
+
+#home {
+    background-image: url("img/hero-photo.jpg");
+}
+
+#bio, #shows, #videos, #contact {
+    background-image: url("img/page-bg.jpg");
+    background-size: auto;
+    height: auto;
+    min-height: 100vh;
+}
+
+.page-nav-links {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    column-gap: 1.5em;
+    height: 3em;
+    padding-top: 2.5em;
+    padding-bottom: 5em;
+}
+
+.page-nav-links a {
+    color: white;
+    font-size: 2em;
+    filter: drop-shadow(5px 5px 5px black);
+}
+
+.page-nav-links a:hover {
+    color: #d92b2e;
+}
+
+.page-logo {
+    width: 15vw;
+    filter: drop-shadow(5px 5px 5px black);
+    min-width: 250px;
+    max-width: 400px;
+}
+
+/***** HOME PAGE *****/
+.home-logo {
+    width: 25vw;
+    filter: drop-shadow(5px 5px 5px black);
+    min-width: 500px;
+}
+
+/***** BIO *****/
+#bio, #shows, #contact, #videos {
+    justify-content: start;
+}
+
+.bio-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+}
+
+.bio-section img {
+    padding-top: 3em;
+    width: 25vw;
+}
+
+.bio-text {
+    padding-top: 3em;
+    color: white;
+    font-size: 1.5em;
+    text-align: center;
+}
+
+.band-section {
+    display: flex;
+    flex-direction: column;
+    width: 50vw;
+    align-items: center;
+    justify-content: center;
+    padding-top: 3em;
+    padding-bottom: 10em;
+}
+
+.band-photos {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    column-gap: 5%;
+}
+
+.band-photos img {
+    width: 16%;
+}
+
+.band-names {
+    padding-top: 1.5em;
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    column-gap: 5%;;
+}
+
+.band-names p {
+    color: white;
+    width: 16%;
+    text-align: center;
+    font-size: 1.5em;
+}
+
+.band-section-mobile {
+    display: none;
+}
+
+/***** SHOWS *****/
+.show-list {
+    padding-top: 5em;
+    width: 100%;
+}
+
+/***** VIDEOS *****/
+.video-list {
+    padding: 2em 0;
+}
+
+/***** CONTACT *****/
+.contact-form {
+    padding-top: 3em;
+}
+
+@media only screen and (max-width: 768px) {
+    /*** GLOBAL ***/
+    .icons a img {
+        width: 3em;
+    }
+
+    .page-nav-links {
+        padding-bottom: 1.5em;
+    }
+
+    .page-nav-links {
+        width: 90vw;
+        flex-wrap: wrap;
+        height: auto;
+    }
+
+    /*** HOME ***/
+    .nav-links {
+        width: 90vw;
+        flex-wrap: wrap;
+        height: auto;
+    }
+
+    .home-logo {
+        width: 90vw;
+        min-width: 0%;
+    }
+
+    /*** BIO ***/
+    .bio-section {
+        width: 90vw;
+        padding: 0;
+    }
+
+    .bio-section img {
+        width: 100%;
+        padding-top: 1em;
+    }
+
+    .bio-text {
+        width: 80%;
+        font-size: 1.15em;
+    }
+
+    .band-section {
+        display: none;
+    }
+
+    .band-section-mobile {
+        display: block;
+        padding: 2em 0;
+    }
+
+    .band-member img {
+        width: 50vw;
+        padding-bottom: 0.5em;
+    }
+
+    .band-member p {
+        text-align: center;
+        color: white;
+        font-size: 1.15em;
+        padding-bottom: 1.25em;
+    }
+
+    /*** SHOWS ***/
+    .show-list {
+        width: 90vw;
+        height: auto;
+        padding-top: 1em;
+    }
+
+    /*** VIDEOS ***/
+    .video-list iframe {
+        width: 90vw;
+        height: 250px;
+    }
+
+
+    /*** CONTACT ***/
+}
